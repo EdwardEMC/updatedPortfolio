@@ -14,9 +14,9 @@
 </head>
 <body>
     <div class="content-wrapper">
+
         <!--Home-->
         <section id="home">
-            <!-- <img id="hero" src="assets/images/heroBG.jpg" alt="cover Image"> -->
             <div id="welcome">
                 <h1>Welcome to my Portfolio</h1>
                 <br>
@@ -31,13 +31,45 @@
                 </div>
             </nav>
         </section>
+
         <!--About-->
-        <section id="about"></section>
+        <section id="about">
+
+        </section>
+
         <!--Portfolio-->
-        <section id="portfolio"></section>
+        <section id="portfolio">
+            <div class="displayArea">
+                <!--Image slide display, when clicking on one open a modal with the details-->
+                <div class="portfoliopicture">
+                    <img src="..." alt="calendar" class="clickable"> 
+                </div>
+                
+                <div id="advModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Application details</h3>
+                            <span class="close">&times;</span> 
+                        </div>
+                        <div class="modal-body">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top modalPic" src="..." alt="Card image cap"> <!--Add image source when clicking the image-->
+                                <div class="card-body">
+                                    <p class="card-text">A space to quickly detail the application.</p>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="modal-footer">
+                            <button class="open">Open</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!--Contact-->
         <section id="contact">
-            <div class="container content">
+            <div class="content">
                 <h2><strong>Contact</strong></h2>
                 <form>
                     <div class="form-group">
