@@ -5,8 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Edward Coad's Portfolio</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="assets/js/jquery-3.4.1.js"></script>
+    <script src="assets/js/script.js"></script>
 </head>
 <body>
-    
+    <div class="content-wrapper">
+        <!--Home-->
+        <section id="home">
+            <!-- <img id="hero" src="assets/images/heroBG.jpg" alt="cover Image"> -->
+            <div id="welcome">
+                <h1>Welcome to my Portfolio</h1>
+                <br>
+                <Button id="view">View</Button>
+            </div>
+            <nav class="navi hidden">
+                <div class="link-wrap">
+                    <a class="section-link" href="#home">Home</a>
+                    <a class="section-link" href="#about">About</a>
+                    <a class="section-link" href="#portfolio">Portfolio</a>
+                    <a class="section-link" href="#contact">Contact</a>
+                </div>
+            </nav>
+        </section>
+        <!--About-->
+        <section id="about"></section>
+        <!--Portfolio-->
+        <section id="portfolio"></section>
+        <!--Contact-->
+        <section id="contact">
+            <div class="container content">
+                <h2><strong>Contact</strong></h2>
+                <form>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="name" class="form-control" id="firstName">
+                    </div>    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="5"></textarea>
+                    </div>
+                    <button class="btn" type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
