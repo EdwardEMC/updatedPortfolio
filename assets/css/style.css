@@ -18,16 +18,16 @@ section:nth-child(1) {
     background: url("../images/heroBG.jpg");
 }
 
-section:nth-child(2) {
-    background: lightgreen;
-}
-
-section:nth-child(3) {
-    background: purple;
+section:nth-child(3) { /*get one big basic image and split it up between the 3*/
+    background: lightgrey;
 }
 
 section:nth-child(4) {
-    background: red;
+    background: lightsteelblue;
+}
+
+section:nth-child(5) {
+    background: lightgrey;
 }
 
 #hero {
@@ -35,11 +35,6 @@ section:nth-child(4) {
     height: 100vh;
     width: 100%;
 }
-
-/* #home {
-    display: flex;
-    justify-content: center;
-} */
 
 #welcome {
     display: flex;
@@ -81,10 +76,40 @@ section:nth-child(4) {
 
 /*------Portfolio page------*/
 
-.portfoliopicture {
+.imageCar {
+    margin-left: auto;
     margin-top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-80%);
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.portfolioPicture {
+    position: absolute;
+}
+
+.clickable{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    z-index: 2;
+}
+
+.previous {
+    position: relative;
+    left: 20px;
+    z-index: 1;
+    height: 300px;
+    width: 300px;
+}
+
+.next {
+    position: relative;
+    right: 20px;
+    z-index: 1;
+    height: 300px;
+    width: 300px;
 }
 
 /*modal settings*/
@@ -124,3 +149,5 @@ section:nth-child(4) {
     text-decoration: none;
     cursor: pointer;
 }
+
+/*-----Contact Page-----*/

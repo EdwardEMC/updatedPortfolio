@@ -22,16 +22,16 @@
                 <br>
                 <Button id="view">View</Button>
             </div>
-            <nav class="navi hidden">
-                <div class="link-wrap">
-                    <a class="section-link" href="#home">Home</a>
-                    <a class="section-link" href="#about">About</a>
-                    <a class="section-link" href="#portfolio">Portfolio</a>
-                    <a class="section-link" href="#contact">Contact</a>
-                </div>
-            </nav>
         </section>
-
+        <nav class="navi hidden">
+            <div class="link-wrap">
+                <a class="section-link" href="#home">Home</a>
+                <a class="section-link" href="#about">About</a>
+                <a class="section-link" href="#portfolio">Portfolio</a>
+                <a class="section-link" href="#contact">Contact</a>
+            </div>
+        </nav>
+        
         <!--About-->
         <section id="about">
 
@@ -41,8 +41,12 @@
         <section id="portfolio">
             <div class="displayArea">
                 <!--Image slide display, when clicking on one open a modal with the details-->
-                <div class="portfoliopicture">
-                    <img src="..." alt="calendar" class="clickable"> 
+                <div class="imageCar"> <!--Make into responsive container-->
+                    <img class="previous" src="...">
+                    <div class="portfoliopicture">
+                        <img src="..." alt="calendar" class="clickable"> 
+                    </div>
+                    <img class="next" src="...">
                 </div>
                 
                 <div id="advModal" class="modal">
@@ -69,24 +73,7 @@
 
         <!--Contact-->
         <section id="contact">
-            <div class="content">
-                <h2><strong>Contact</strong></h2>
-                <form>
-                    <div class="form-group">
-                        <label for="firstName">First Name</label>
-                        <input type="name" class="form-control" id="firstName">
-                    </div>    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" id="message" rows="5"></textarea>
-                    </div>
-                    <button class="btn" type="submit">Submit</button>
-                </form>
-            </div>
+           
         </section>
     </div>
 </body>
