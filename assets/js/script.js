@@ -1,3 +1,7 @@
+window.onload = function() {
+    location.href = "#home";
+};
+
 $(document).ready(function(){
     const span = $(".close");
     const modal = $("#advModal");
@@ -53,7 +57,7 @@ $(document).ready(function(){
     //     if($(window).scrollTop()<hSHeight) {
     //         window.location.hash = "home";
     //     }
-    //     else if($(window).scrollTop()>=hSHeight&&$(window).scrollTop()<hSHeight*2) {
+    //     if($(window).scrollTop()>=hSHeight&&$(window).scrollTop()<hSHeight*2) {
     //         window.location.hash = "about";
     //     }
     //     else if( $(window).scrollTop()>=hSHeight*2&&$(window).scrollTop()<hSHeight*3) {
@@ -63,6 +67,12 @@ $(document).ready(function(){
     //         window.location.hash = "contact";
     //     }
     // });
+
+    //timeline settings
+    $(".wrapper .single-item > span").on("click", function(e) {
+        $(".wrapper .single-item.active").removeClass("active");
+        $(this).parent().addClass("active");
+    })
 
     //modal settings for portfolio
     const images = [{url: "assets/images/calendar.jpg", href: "https://edwardemc.github.io/calendar/"}, {url: "assets/images/weatherApp.jpg", href: "https://edwardemc.github.io/weather-Forecast/"}, {url: "assets/images/triviaGame.jpg", href: "https://edwardemc.github.io/code-Quiz/"}, {url: "assets/images/fantasticRecipeFinder.jpg", href: "https://edwardemc.github.io/project1/"}];
