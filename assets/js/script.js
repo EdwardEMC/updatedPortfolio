@@ -9,26 +9,44 @@ $(document).ready(function(){
     const open = $(".open");
     const next = $(".next");
     const previous = $(".previous");
+
+    const info = [
+        { 
+            feature: "Schooling",
+            header: "International Baccalaureate Diploma",
+            url: " ",
+            text: " "
+        },
+        { 
+            feature: "Work experience",
+            header: "Hospitality background",
+            url: " ",
+            text: " "
+        },
+        { 
+            feature: "Shake Street",
+            header: "Personal business venture",
+            url: " ",
+            text: " "
+        },
+        { 
+            feature: "Triology Education",
+            header: "Web developement course",
+            url: " ",
+            text: " "
+        },
+        { 
+            feature: "University of South Australia",
+            header: "Bachelor of Information Technology",
+            url: " ",
+            text: " "
+        }
+    ];
     
     //button to move past the hero section
     $("#view").on("click", function(){
         location.href = "#about";
     });
-
-    //cross browser smooth scroll function -- causes slow scroll on chrome? check on other browsers
-    // $("a").on("click", function(event) {
-    //     if (this.hash !== "") {
-    //         event.preventDefault();
-
-    //         var hash = this.hash;
-
-    //         $('html, body').animate({
-    //         scrollTop: $(hash).offset().top
-    //         }, 800, function(){
-    //             window.location.hash = hash;
-    //         });
-    //     }
-    // });
 
     //display navigation bar after scrolling past hero section
     let isFixed = false;
@@ -69,10 +87,32 @@ $(document).ready(function(){
     // });
 
     //timeline settings
-    $(".wrapper .single-item > span").on("click", function(e) {
-        $(".wrapper .single-item.active").removeClass("active");
-        $(this).parent().addClass("active");
-    })
+    $(".single-item > span").on("click", function() {
+        $(".single-item").removeClass("single-item-active").fadeToggle(200);
+        $(this).parent().addClass("single-item-active").fadeToggle(200);
+        const pos = this.id;
+        displayInfo(pos);
+    });
+
+    const displayInfo = param1 => {
+        $(".information").empty();
+
+        const div1 = $("<div>").addClass("card");
+        const div2 = $("<div>").addClass("card-header");
+        const div3 = $("<div>").addClass("card-body");
+        const h5 = $("<h5>").addClass("card-title");
+        const img = $("<img>").addClass("timeline-picture");
+        const p = $("<p>").addClass("card-text");
+
+        div2.text(info[param1].feature);
+        h5.text(info[param1].header);
+        img.text(info[param1].url);
+        p.text(info[param1].text);
+
+        div3.append(h5, p);
+        div1.append(div2,div3);
+        $(".information").append(div1);
+    }
 
     //modal settings for portfolio
     const images = [{url: "assets/images/calendar.jpg", href: "https://edwardemc.github.io/calendar/"}, {url: "assets/images/weatherApp.jpg", href: "https://edwardemc.github.io/weather-Forecast/"}, {url: "assets/images/triviaGame.jpg", href: "https://edwardemc.github.io/code-Quiz/"}, {url: "assets/images/fantasticRecipeFinder.jpg", href: "https://edwardemc.github.io/project1/"}];
@@ -127,14 +167,15 @@ $(document).ready(function(){
         initial()
     });
 
-    open.on("click", () => window.location = images[y].href);
+    open.on("click", () => window.open(images[y].href, "blank"));
 
     //on click to open the advanced search modal
     modalSel.on("click", () => {
         modal.css("display", "block");
         $(".modalPic").attr({
-            src: images[y].url
+            src: images[y].url,
         });
+        $(".modalPic").attr("style", "width:300px; height:300px; float:right; margin-left:30px;"); 
     });
 
     //clicking the x button will close the modal

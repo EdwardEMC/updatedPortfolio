@@ -24,101 +24,106 @@
                 <Button id="view">View</Button>
             </div>
         </section>
-        <nav class="navi hidden">
+        <div class="navi hidden">
             <div class="link-wrap">
                 <a class="section-link" href="#home">Home</a>
                 <a class="section-link" href="#about">About</a>
+                <a class="section-link" href="#timeline">Experiences</a>
                 <a class="section-link" href="#portfolio">Portfolio</a>
                 <a class="section-link" href="#contact">Contact</a>
             </div>
-        </nav>
+        </div>
         
         <!--About-->
         <section id="about">
-            <div class="container-fluid">
-                <div class="wrapper">
-                    <div class="timeline-area">
-                        <div class="line-area"></div>
-                        <div class="single-item active">
-                            <span>2001-2005</span>
-                            <div class="img-area">
-                            <a href="#">
-                                <img src="assets/images/heroBG.png" alt="">
-                                <span>Yahoo</span>
-                            </a>
-                            </div>
-                        </div>
-                        <div class="single-item">
-                            <span>2001-2005</span>
-                            <div class="img-area">
-                            <a href="#">
-                                <img src="assets/images/heroBG.png" alt="">
-                                <span>Yahoo</span>
-                            </a>
-                            </div>
-                        </div>
-                        <div class="single-item">
-                            <span>2001-2005</span>
-                            <div class="img-area">
-                            <a href="#">
-                                <img src="assets/images/heroBG.png" alt="">
-                                <span>Yahoo</span>
-                            </a>
-                            </div>
-                        </div>
-                        <div class="single-item">
-                            <span>2001-2005</span>
-                            <div class="img-area">
-                            <a href="#">
-                                <img src="assets/images/heroBG.png" alt="">
-                                <span>Yahoo</span>
-                            </a>
-                            </div>
-                        </div>
-                        <div class="single-item">
-                            <span>2001-2005</span>
-                            <div class="img-area">
-                            <a href="#">
-                                <img src="assets/images/heroBG.png" alt="">
-                                <span>Yahoo</span>
-                            </a>
-                            </div>
-                        </div>
+            <div class="container about-content">
+                <h2><strong>About Me</strong></h2>
+                <hr>
+                <img id="profilePicture" src="assets/images/heroBG.png" alt="Edward's profile picture" height="200px" width="200px">
+    
+                <p>Ut aliquam at mi ut vehicula. Cras laoreet metus ut nisi ullamcorper convallis. Donec ac dignissim tortor. Maecenas sed justo a arcu ultricies maximus. Etiam vehicula viverra finibus. Phasellus ullamcorper libero ac volutpat interdum. Cras quis est vitae lacus finibus consectetur nec sed mauris. Praesent imperdiet interdum lorem, sed vehicula magna scelerisque vitae. Sed nec tincidunt mauris. Etiam aliquet cursus ligula eu iaculis. Sed a lorem felis. Nam vel venenatis mi, eget placerat enim.</p>
+    
+                <p>Ut aliquam at mi ut vehicula. Cras laoreet metus ut nisi ullamcorper convallis. Donec ac dignissim tortor. Maecenas sed justo a arcu ultricies maximus. Etiam vehicula viverra finibus. Phasellus ullamcorper libero ac volutpat interdum. Cras quis est vitae lacus finibus consectetur nec sed mauris. Praesent imperdiet interdum lorem, sed vehicula magna scelerisque vitae. Sed nec tincidunt mauris. Etiam aliquet cursus ligula eu iaculis. Sed a lorem felis. Nam vel venenatis mi, eget placerat enim.</p>
+                <br>
+                <h4 class="text-center">Career & coding goals</h4>
+                <hr>
+                <div class="row text-center">
+                    <div class="col-sm">
+                        <img class="goal-icon" src="..." alt="icon">
+                        <h6>Learning</h6>
+                    </div>
+                    <div class="col-sm">
+                        <img class="goal-icon" src="..." alt="icon">
+                        <h6>Automation</h6>
+                    </div>
+                    <div class="col-sm">
+                        <img class="goal-icon" src="..." alt="icon">
+                        <h6>Dynamic</h6>
+                    </div>
+                    <div class="col-sm">
+                        <img class="goal-icon" src="..." alt="icon">
+                        <h6>Adaptability</h6>
                     </div>
                 </div>
+            </div>
+            
+        </section>
+        
+        <!--Timeline-->
+        <section id="timeline">
+            <div class="container">
+                <div class="line-item"></div>
+                <div class="row time-line">
+                    <div class="col-sm single-item">
+                        <span id="0">2009-2011</span>
+                    </div>
+                    <div class="col-sm single-item">
+                        <span id="1">2011-2015</span>
+                    </div>
+                    <div class="col-sm single-item">
+                        <span id="2">2015-2019</span>
+                    </div>
+                    <div class="col-sm single-item">
+                        <span id="3">2019-2020</span>
+                    </div>
+                    <div class="col-sm single-item">
+                        <span id="4">2020-2023</span>
+                    </div>
+                </div>
+                <div class="information">
+                    <!--Area for displaying the timeline info-->
+                </div>    
             </div>
         </section>
 
         <!--Portfolio-->
         <section id="portfolio">
-            <div class="displayArea">
-                <!--Image slide display, when clicking on one open a modal with the details-->
-                <div class="container-fluid">
-                    <div class="imageCar"> <!--Make into responsive container-->
-                        <img class="previous img-fluid" src="...">
-                        <div class="portfoliopicture img-fluid">
-                            <img src="..." alt="calendar" class="clickable"> 
+            <div class="container">
+                <div class="displayArea">
+                    <!--Image slide display, when clicking on one open a modal with the details-->
+                    <div class="container-fluid">
+                        <div class="imageCar"> <!--Make into responsive container-->
+                            <img class="previous img-fluid" src="...">
+                            <div class="portfoliopicture img-fluid">
+                                <img src="..." alt="calendar" class="clickable"> 
+                            </div>
+                            <img class="next img-fluid" src="...">
                         </div>
-                        <img class="next img-fluid" src="...">
                     </div>
-                </div>
-                
-                <div id="advModal" class="modal">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3>Application details</h3>
-                            <span class="close">&times;</span> 
-                        </div>
-                        <div class="modal-body">
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top modalPic" src="..." alt="Card image cap"> <!--Add image source when clicking the image-->
-                                <div class="card-body">
-                                    <p class="card-text">A space to quickly detail the application.</p>
-                                </div>
-                            </div> 
-                        </div>
-                        <div class="modal-footer">
-                            <button class="open">Open</button>
+                    
+                    <div id="advModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Application details</h3>
+                                <span class="close">&times;</span> 
+                            </div>
+                            <div class="modal-body">
+                                <img class="modalPic" src="..." alt="Card image cap"> <!--Add image source when clicking the image-->
+                                <p id="applicationInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, quo? Quam, fugiat amet a minus consequatur iure eius modi id exercitationem distinctio vero, omnis error sapiente vel nostrum similique. Nemo.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="open">Open</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -127,7 +132,50 @@
 
         <!--Contact-->
         <section id="contact">
-           
+            <div class="container contact-area">
+                <div class="row">
+                    <div class="col-sm-6 contact-image">
+                    <img src="assets/images/heroBG.png" style="width:100%">
+                    </div>
+                    <div class="col-sm-6">
+                        <form class="contact-form">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                            <br>
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                            <br>
+                            <label for="country">Type of inquiry</label>
+                            <select id="country" name="country">
+                            <option value="work">Work related</option>
+                            <option value="casual">Casual chat</option>
+                            <option value="other">Other</option>
+                            </select>
+                            <br>
+                            <label for="subject">Subject</label>
+                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                            <br>
+                        </form>
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row social">
+                    <div class="col-sm-2 text-center">
+                        <img class="icons" src="assets/images/github-icon.png" alt="github">
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <img class="icons" src="assets/images/facebook-icon.png" alt="facebook">
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <img class="icons" src="assets/images/linkedin-icon.png" alt="linkedIn">
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <img class="icons" src="assets/images/insta-icon.png" alt="instagram">
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </body>
