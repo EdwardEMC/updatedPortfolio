@@ -98,33 +98,37 @@
 
         <!--Portfolio-->
         <section id="portfolio">
-            <div class="container">
-                <div class="displayArea">
-                    <!--Image slide display, when clicking on one open a modal with the details-->
-                    <div class="container-fluid">
-                        <div class="imageCar"> <!--Make into responsive container-->
-                            <img class="previous img-fluid" src="...">
-                            <div class="portfoliopicture img-fluid">
-                                <img src="..." alt="calendar" class="clickable"> 
-                            </div>
-                            <img class="next img-fluid" src="...">
-                        </div>
+            <div class="container-fluid">
+                <div class="row works">
+                    <div class="col-sm-4 text-center">
+                        <h3 class="types" value="0">JavaScript</h3>
                     </div>
-                    
-                    <div id="advModal" class="modal">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h3>Application details</h3>
-                                <span class="close">&times;</span> 
-                            </div>
-                            <div class="modal-body">
-                                <img class="modalPic" src="..." alt="Card image cap"> <!--Add image source when clicking the image-->
-                                <p id="applicationInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, quo? Quam, fugiat amet a minus consequatur iure eius modi id exercitationem distinctio vero, omnis error sapiente vel nostrum similique. Nemo.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="open">Open</button>
-                            </div>
-                        </div>
+                    <div class="col-sm-4 text-center">
+                        <h3 class="types" value="1">Node.js</h3>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <h3 class="types" value="2">Linux</h3>
+                    </div>
+                </div>
+                <div class="row portfolioPictures">
+                    <a class="previous">&#10094;</a>
+  
+                    <img class="modalSel img-fluid" src="..." alt="...">
+                    <a class="next">&#10095;</a>
+                </div>
+            </div>
+            <div id="advModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Application details</h3>
+                        <span class="close">&times;</span> 
+                    </div>
+                    <div class="modal-body">
+                        <img class="modalPic" src="..." alt="Card image cap"> <!--Add image/text source when clicking the image-->
+                        <p id="applicationInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, quo? Quam, fugiat amet a minus consequatur iure eius modi id exercitationem distinctio vero, omnis error sapiente vel nostrum similique. Nemo.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="open">Open</button>
                     </div>
                 </div>
             </div>
@@ -163,16 +167,16 @@
                 <br>
                 <div class="row social">
                     <div class="col-sm-2 text-center">
-                        <img class="icons" src="assets/images/github-icon.png" alt="github">
+                        <img class="icons" id="github" src="assets/images/github-icon.png" value="https://github.com/EdwardEMC" alt="github">
                     </div>
                     <div class="col-sm-2 text-center">
-                        <img class="icons" src="assets/images/facebook-icon.png" alt="facebook">
+                        <img class="icons" id="facebook" src="assets/images/facebook-icon.png" value="https://www.facebook.com/edward.m.coad" alt="facebook">
                     </div>
                     <div class="col-sm-2 text-center">
-                        <img class="icons" src="assets/images/linkedin-icon.png" alt="linkedIn">
+                        <img class="icons" id="linkedin" src="assets/images/linkedin-icon.png" value="https://www.linkedin.com/in/edwardcoad/" alt="linkedIn">
                     </div>
                     <div class="col-sm-2 text-center">
-                        <img class="icons" src="assets/images/insta-icon.png" alt="instagram">
+                        <img class="icons" id="instagram" src="assets/images/insta-icon.png" alt="instagram">
                     </div>
                 </div>
             </div>

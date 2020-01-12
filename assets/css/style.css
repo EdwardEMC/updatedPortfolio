@@ -24,7 +24,7 @@ section:nth-child(1) {
     background-size: 100% 100%;
 }
 
-section:nth-child(3) { /*get one big basic image and split it up between the 3, skips 2 as the nav bar counts as a child in this case*/
+section:nth-child(3) { /*get one big basic image and split it up between the 4, skips 2 as the nav bar counts as a child in this case*/
     background: lightgrey;
     min-height: 110vh;
 }
@@ -170,40 +170,38 @@ section:nth-child(6) {
 
 /*------Portfolio page------*/
 
-.imageCar {
-    margin-left: auto;
-    margin-top: 50%;
-    transform: translateY(-80%);
+.works {
+    margin-top: 100px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.types:hover {
+    opacity: 30%;
+}
+
+.portfolioPictures {
+    margin-top: 50px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-self: center;
 }
 
-.portfolioPicture {
-    position: absolute;
+.modalSel:hover {
+    cursor: pointer;
+    opacity: 80%;
 }
 
-.clickable{
-    position: relative;
-    max-height: 400px;
-    max-width: 400px;
-    z-index: 2;
-}
-
-.previous {
-    position: relative;
-    left: 20px;
-    z-index: 1;
-    max-height: 300px;
-    max-width: 300px;
-}
-
-.next {
-    position: relative;
-    right: 20px;
-    z-index: 1;
-    max-height: 300px;
-    max-width: 300px;
+.previous, .next {
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: auto;
+    padding: 16px;
+    background-color: burlywood;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
 }
 
 /*modal settings*/

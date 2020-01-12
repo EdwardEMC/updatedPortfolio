@@ -5,7 +5,7 @@ window.onload = function() {
 $(document).ready(function(){
     const span = $(".close");
     const modal = $("#advModal");
-    const modalSel = $(".clickable");
+    const modalSel = $(".modalSel");
     const open = $(".open");
     const next = $(".next");
     const previous = $(".previous");
@@ -115,40 +115,38 @@ $(document).ready(function(){
     }
 
     //modal settings for portfolio
-    const images = [{url: "assets/images/calendar.jpg", href: "https://edwardemc.github.io/calendar/"}, {url: "assets/images/weatherApp.jpg", href: "https://edwardemc.github.io/weather-Forecast/"}, {url: "assets/images/triviaGame.jpg", href: "https://edwardemc.github.io/code-Quiz/"}, {url: "assets/images/fantasticRecipeFinder.jpg", href: "https://edwardemc.github.io/project1/"}];
+    const images = [
+        [{
+                url: "assets/images/calendar.jpg", href: "https://edwardemc.github.io/calendar/"
+            }, 
+            {
+                url: "assets/images/weatherApp.jpg", href: "https://edwardemc.github.io/weather-Forecast/"
+            }, 
+            {
+                url: "assets/images/triviaGame.jpg", href: "https://edwardemc.github.io/code-Quiz/"
+            }, 
+            {
+                url: "assets/images/fantasticRecipeFinder.jpg", href: "https://edwardemc.github.io/project1/"
+        }],
+        [{
+                url: "assets/images/weatherApp.jpg", href: "https://edwardemc.github.io/weather-Forecast/"
+            },
+                "","",""],
+            [{
+                url: "assets/images/triviaGame.jpg", href: "https://edwardemc.github.io/code-Quiz/"},
+                "","",""
+        ]
+    ];
 
-    let y = 1;
+    let y = 0;
+    let x = 0;
 
-    const positive = function(y) {
-        if(y==images.length-1) {
-            y = 0;
-        }
-        else {
-            y = y+1;
-        }
-        return y;
-    }
-
-    const negative = function(y) {
-        if(y==0) {
-            y = images.length-1;
-        }
-        else {
-            y = y-1;
-        }
-        return y;
-    }
-
-    const initial = () => {
-        previous.attr("src", images[negative(y)].url);
-        modalSel.attr("src", images[y].url);
-        next.attr("src", images[positive(y)].url);
-        }
+    const initial = () => modalSel.attr("src", images[x][y].url);
     initial();
     
     // on click functions to control the image slideshow --- change to click on next picture
     next.on("click", () => {
-        if(y==images.length-1) {
+        if(y==images[x].length-1) {
             y = 0;
         }
         else {
@@ -159,7 +157,7 @@ $(document).ready(function(){
 
     previous.on("click", () => {
         if(y==0) {
-            y = images.length-1;
+            y = images[x].length-1;
         }
         else {
             y = y-1;
@@ -167,17 +165,29 @@ $(document).ready(function(){
         initial()
     });
 
-    open.on("click", () => window.open(images[y].href, "blank"));
+    open.on("click", () => window.open(images[x][y].href, "blank"));
+
+    //on click functions for changing the portfolio libraries
+    $(".types").on("click", function() {
+        y = 0;
+        x = $(this).attr("value");
+        initial(x);
+    });
 
     //on click to open the advanced search modal
     modalSel.on("click", () => {
         modal.css("display", "block");
         $(".modalPic").attr({
-            src: images[y].url,
+            src: images[x][y].url,
         });
         $(".modalPic").attr("style", "width:300px; height:300px; float:right; margin-left:30px;"); 
     });
 
     //clicking the x button will close the modal
     span.on("click", () => modal.css("display", "none"));
+
+    //on click event for social media icons
+    $(".icons").on("click", function() {
+        window.open($(this).attr("value"), "blank");
+    });
 });
