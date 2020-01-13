@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <script src="assets/js/jquery-3.4.1.js"></script>
+    <script src="assets/js/information.js"></script>
     <script src="assets/js/script.js"></script>
 </head>
 <body>
@@ -143,7 +144,9 @@
                         </div>
                         <div class="modal-body">
                             <img class="modalPic" src="..." alt="Card image cap"> <!--Add image/text source when clicking the image-->
-                            <p id="applicationInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, quo? Quam, fugiat amet a minus consequatur iure eius modi id exercitationem distinctio vero, omnis error sapiente vel nostrum similique. Nemo.</p>
+                            <div class="description">
+                                <!--Area for application description--> 
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button class="open">Open</button>
@@ -160,7 +163,7 @@
                         <img src="assets/images/heroBG.png" style="width:100%">
                         </div> -->
                         <div class="col-sm-6 contact-container">
-                            <form class="contact-form">
+                            <form class="contact-form" action="mailto:edwardcoad.ec@gmail.com" method="post" enctype="text/plain">
                                 <label for="fname">First Name</label>
                                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
                                 <br>
@@ -177,8 +180,8 @@
                                 <label for="subject">Subject</label>
                                 <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
                                 <br>
+                                <input type="submit" value="Submit">
                             </form>
-                            <input type="submit" value="Submit">
                         </div>
                     </div>
                     <br>

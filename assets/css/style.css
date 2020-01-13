@@ -47,7 +47,8 @@ section {
 }
 
 #portfolio { /*get one big basic image and split it up between the 4, skips 2 as the nav bar counts as a child in this case*/
-    background: lightgrey;
+    background-image: url("../images/portfolioBackground.jpg");
+    background-size: 100% 100%;
     min-height: 110vh;
 }
 
@@ -211,9 +212,14 @@ section {
     align-self: center;
 }
 
+.modalSel {
+    border: 3px solid black;
+    box-shadow: 0 0 20px black;
+}
+
 .modalSel:hover {
     cursor: pointer;
-    opacity: 80%;
+    filter: brightness(110%);
 }
 
 .previous, .next {
@@ -240,9 +246,9 @@ section {
 }
 
 .modal-header {
-    background-color: brown;
+    background-color: black;
     padding: 5px 15px;
-    color: orange;
+    color: white;
     text-align: center;
 }
 .modal-content {

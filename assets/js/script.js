@@ -2,49 +2,18 @@ window.onload = function() {
     location.href = "#home";
 };
 
-$(document).ready(function(){
+$(document).ready(function() {
     const span = $(".close");
     const modal = $("#advModal");
     const modalSel = $(".modalSel");
     const open = $(".open");
     const next = $(".next");
     const previous = $(".previous");
-
-    const info = [
-        { 
-            feature: "Schooling",
-            header: "International Baccalaureate Diploma",
-            url: " ",
-            text: " "
-        },
-        { 
-            feature: "Work experience",
-            header: "Hospitality background",
-            url: " ",
-            text: " "
-        },
-        { 
-            feature: "Shake Street",
-            header: "Personal business venture",
-            url: " ",
-            text: " "
-        },
-        { 
-            feature: "Triology Education",
-            header: "Web developement course",
-            url: " ",
-            text: " "
-        },
-        { 
-            feature: "University of South Australia",
-            header: "Bachelor of Information Technology",
-            url: " ",
-            text: " "
-        }
-    ];
-    
+    const modalTxt = $(".description");
+    const view = $("#view");
+   
     //button to move past the hero section
-    $("#view").on("click", function(){
+    view.on("click", function(){
         location.href = "#about";
     });
 
@@ -62,7 +31,6 @@ $(document).ready(function(){
         if($(window).scrollTop()>=hSHeight && !isFixed) {
             isFixed = true
             navbar.removeClass("hidden");
-            // navbar.hide().addClass("page-link").slideDown(300);
             navbar.addClass("page-link");
         }
 
@@ -74,23 +42,6 @@ $(document).ready(function(){
             });
         }
     });
-
-    // $(document).on("scroll", function(){
-    //     const hSHeight = $("section").height();
-
-    //     if($(window).scrollTop()<hSHeight) {
-    //         window.location.hash = "home";
-    //     }
-    //     if($(window).scrollTop()>=hSHeight&&$(window).scrollTop()<hSHeight*2) {
-    //         window.location.hash = "about";
-    //     }
-    //     else if( $(window).scrollTop()>=hSHeight*2&&$(window).scrollTop()<hSHeight*3) {
-    //         window.location.hash = "portfolio";
-    //     }
-    //     else if( $(window).scrollTop()>=hSHeight*3&&$(window).scrollTop()<hSHeight*4) {
-    //         window.location.hash = "contact";
-    //     }
-    // });
 
     //timeline settings
     $(".single-item > span").on("click", function() {
@@ -121,33 +72,15 @@ $(document).ready(function(){
     }
 
     //modal settings for portfolio
-    const images = [
-        [{
-                url: "assets/images/calendar.jpg", href: "https://edwardemc.github.io/calendar/"
-            }, 
-            {
-                url: "assets/images/weatherApp.jpg", href: "https://edwardemc.github.io/weather-Forecast/"
-            }, 
-            {
-                url: "assets/images/triviaGame.jpg", href: "https://edwardemc.github.io/code-Quiz/"
-            }, 
-            {
-                url: "assets/images/fantasticRecipeFinder.jpg", href: "https://edwardemc.github.io/project1/"
-        }],
-        [{
-                url: "assets/images/underConst.png", href: ""
-            },
-                "","",""],
-            [{
-                url: "assets/images/underConst.png", href: ""},
-                "","",""
-        ]
-    ];
-
     let y = 0;
     let x = 0;
 
-    const initial = () => modalSel.attr("src", images[x][y].url);
+    const initial = () => {
+        modalSel.attr("src", images[x][y].url);
+        const p = $("<p>").text(images[x][y].text);
+        modalTxt.empty();
+        modalTxt.append(p);
+    }
     initial();
     
     // on click functions to control the image slideshow --- change to click on next picture
@@ -197,11 +130,12 @@ $(document).ready(function(){
         window.open($(this).attr("value"), "blank");
     });
 
-    $("#view").mouseenter(function() {
+    //hover function for enter button
+    view.mouseenter(function() {
         $("#arrow").text(" \u2193");
     });
 
-    $("#view").mouseleave(function() {
+    view.mouseleave(function() {
         $("#arrow").text("\u2192");
     });
 });
