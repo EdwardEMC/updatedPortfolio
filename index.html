@@ -15,13 +15,13 @@
 </head>
 <body>
     <div class="content-wrapper">
-
+        
         <!--Home-->
-        <section id="home">
+        <section id="home" style="background-image:url(assets/images/backgroundgif.gif); background-size: 100% 100%;">
             <div id="welcome">
                 <h1>Welcome to my Portfolio</h1>
                 <br>
-                <Button id="view">View</Button>
+                <Button id="view">Enter <span id="arrow">&#8594;</span></Button>
             </div>
         </section>
         <div class="navi hidden">
@@ -33,138 +33,160 @@
                 <a class="section-link" href="#contact">Contact</a>
             </div>
         </div>
+        <div class="navig static">
+            <div class="link-wrap">
+                <a class="section-link" href="#home">Home</a>
+                <a class="section-link" href="#about">About</a>
+                <a class="section-link" href="#timeline">Experiences</a>
+                <a class="section-link" href="#portfolio">Portfolio</a>
+                <a class="section-link" href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="margin-white">    
+            <!--About-->
+            <section id="about">
+                <div class="container about-content">
+                    <h2><strong>About Me</strong></h2>
+                    <hr>
+                    <img id="profilePicture" src="assets/images/aboutPicture.jpg" alt="Edward's profile picture" height="200px" width="200px">
         
-        <!--About-->
-        <section id="about">
-            <div class="container about-content">
-                <h2><strong>About Me</strong></h2>
-                <hr>
-                <img id="profilePicture" src="assets/images/heroBG.png" alt="Edward's profile picture" height="200px" width="200px">
-    
-                <p>Ut aliquam at mi ut vehicula. Cras laoreet metus ut nisi ullamcorper convallis. Donec ac dignissim tortor. Maecenas sed justo a arcu ultricies maximus. Etiam vehicula viverra finibus. Phasellus ullamcorper libero ac volutpat interdum. Cras quis est vitae lacus finibus consectetur nec sed mauris. Praesent imperdiet interdum lorem, sed vehicula magna scelerisque vitae. Sed nec tincidunt mauris. Etiam aliquet cursus ligula eu iaculis. Sed a lorem felis. Nam vel venenatis mi, eget placerat enim.</p>
-    
-                <p>Ut aliquam at mi ut vehicula. Cras laoreet metus ut nisi ullamcorper convallis. Donec ac dignissim tortor. Maecenas sed justo a arcu ultricies maximus. Etiam vehicula viverra finibus. Phasellus ullamcorper libero ac volutpat interdum. Cras quis est vitae lacus finibus consectetur nec sed mauris. Praesent imperdiet interdum lorem, sed vehicula magna scelerisque vitae. Sed nec tincidunt mauris. Etiam aliquet cursus ligula eu iaculis. Sed a lorem felis. Nam vel venenatis mi, eget placerat enim.</p>
-                <br>
-                <h4 class="text-center">Career & coding goals</h4>
-                <hr>
-                <div class="row text-center">
-                    <div class="col-sm">
-                        <img class="goal-icon" src="..." alt="icon">
-                        <h6>Learning</h6>
-                    </div>
-                    <div class="col-sm">
-                        <img class="goal-icon" src="..." alt="icon">
-                        <h6>Automation</h6>
-                    </div>
-                    <div class="col-sm">
-                        <img class="goal-icon" src="..." alt="icon">
-                        <h6>Dynamic</h6>
-                    </div>
-                    <div class="col-sm">
-                        <img class="goal-icon" src="..." alt="icon">
-                        <h6>Adaptability</h6>
+                    <p>Currently a Full Stack Web Developer with extensive experience as a hospitality business owner. Skills in HTML, CSS and Javascript. Strengths in organisation, communication, graphic design and managing a team in a time-limited environment. Successfully started a small business whilst managing all business aspects, including but not limited to, website design and social media. Able to grow the business from an idea to a food truck and ultimately a cafe within 3 years.</p> 
+                    
+                    <p>Passionate about solving logic based challenges, evaluating them to offer multiple solutions and choosing the most appropriate. Positioned well to not only develop interactive responsive web applications but also to evaluate the effectiveness and implementation by the development team, through my years of managing and training hospitality teams. </p>
+                    <br>
+                    <br>
+                    <h4 class="text-center">Coding goals</h4>
+                    <hr>
+                    <br>
+                    <div class="row text-center">
+                        <div class="col-sm">
+                            <img class="goal-icon" src="assets/images/learning.jpg" alt="icon">
+                            <h6>Learning</h6>
+                            <br>
+                            <p>Expanding a knowledge base far beyond just Html, css & javaScript.</p>
+                        </div>
+                        <div class="col-sm">
+                            <img class="goal-icon" src="assets/images/automation.png" alt="icon">
+                            <h6>Automation</h6>
+                            <br>
+                            <p>If it only has to be coded once, it's more than enough.</p>
+                        </div>
+                        <div class="col-sm">
+                            <img class="goal-icon" src="assets/images/dynamic.png" alt="icon">
+                            <h6>Dynamic</h6>
+                            <br>
+                            <p>Add a little life into a webpage through the development of the UX.</p>
+                        </div>
+                        <div class="col-sm">
+                            <img class="goal-icon" src="assets/images/adapt.png" alt="icon">
+                            <h6>Adaptability</h6>
+                            <br>
+                            <p>Develop the ability to code any type of application or machine possible.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+                
+            </section>
             
-        </section>
-        
-        <!--Timeline-->
-        <section id="timeline">
-            <div class="container">
-                <div class="line-item"></div>
-                <div class="row time-line">
-                    <div class="col-sm single-item">
-                        <span id="0">2009-2011</span>
+            <!--Timeline-->
+            <section id="timeline">
+                <div class="container">
+                    <div class="line-item"></div>
+                    <div class="row time-line">
+                        <div class="col-sm single-item">
+                            <span id="0">2009-2011</span>
+                        </div>
+                        <div class="col-sm single-item">
+                            <span id="1">2011-2015</span>
+                        </div>
+                        <div class="col-sm single-item">
+                            <span id="2">2015-2019</span>
+                        </div>
+                        <div class="col-sm single-item">
+                            <span id="3">2019-2020</span>
+                        </div>
+                        <div class="col-sm single-item">
+                            <span id="4">2020-2023</span>
+                        </div>
                     </div>
-                    <div class="col-sm single-item">
-                        <span id="1">2011-2015</span>
-                    </div>
-                    <div class="col-sm single-item">
-                        <span id="2">2015-2019</span>
-                    </div>
-                    <div class="col-sm single-item">
-                        <span id="3">2019-2020</span>
-                    </div>
-                    <div class="col-sm single-item">
-                        <span id="4">2020-2023</span>
-                    </div>
+                    <div class="information">
+                        <!--Area for displaying the timeline info-->
+                    </div>    
                 </div>
-                <div class="information">
-                    <!--Area for displaying the timeline info-->
-                </div>    
-            </div>
-        </section>
+            </section>
 
-        <!--Portfolio-->
-        <section id="portfolio">
-            <div class="container-fluid">
-                <div class="row works">
-                    <div class="col-sm-4 text-center">
-                        <h3 class="types" value="0">JavaScript</h3>
+            <!--Portfolio-->
+            <section id="portfolio">
+                <div class="container-fluid">
+                    <div class="row works">
+                        <div class="col-sm-4 text-center">
+                            <h3 class="types" value="0">JavaScript</h3>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <h3 class="types" value="1">Node.js</h3>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <h3 class="types" value="2">Linux</h3>
+                        </div>
                     </div>
-                    <div class="col-sm-4 text-center">
-                        <h3 class="types" value="1">Node.js</h3>
-                    </div>
-                    <div class="col-sm-4 text-center">
-                        <h3 class="types" value="2">Linux</h3>
-                    </div>
-                </div>
-                <div class="row portfolioPictures">
-                    <a class="previous">&#10094;</a>
-  
-                    <img class="modalSel img-fluid" src="..." alt="...">
-                    <a class="next">&#10095;</a>
-                </div>
-            </div>
-            <div id="advModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3>Application details</h3>
-                        <span class="close">&times;</span> 
-                    </div>
-                    <div class="modal-body">
-                        <img class="modalPic" src="..." alt="Card image cap"> <!--Add image/text source when clicking the image-->
-                        <p id="applicationInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, quo? Quam, fugiat amet a minus consequatur iure eius modi id exercitationem distinctio vero, omnis error sapiente vel nostrum similique. Nemo.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="open">Open</button>
+                    <div class="row portfolioPictures">
+                        <a class="previous">&#10094;</a>
+                        <img class="modalSel img-fluid" src="..." alt="..."> <!--Add image/text initially-->
+                        <a class="next">&#10095;</a>
                     </div>
                 </div>
-            </div>
-        </section>
+                <div id="advModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Application details</h3>
+                            <span class="close">&times;</span> 
+                        </div>
+                        <div class="modal-body">
+                            <img class="modalPic" src="..." alt="Card image cap"> <!--Add image/text source when clicking the image-->
+                            <p id="applicationInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, quo? Quam, fugiat amet a minus consequatur iure eius modi id exercitationem distinctio vero, omnis error sapiente vel nostrum similique. Nemo.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="open">Open</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <!--Contact-->
-        <section id="contact">
-            <div class="container contact-area">
-                <div class="row">
-                    <div class="col-sm-6 contact-image">
-                    <img src="assets/images/heroBG.png" style="width:100%">
+            <!--Contact-->
+            <section id="contact">
+                <div class="container contact-area">
+                    <div class="row">
+                        <!-- <div class="col-sm-6 contact-image">
+                        <img src="assets/images/heroBG.png" style="width:100%">
+                        </div> -->
+                        <div class="col-sm-6 contact-container">
+                            <form class="contact-form">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                                <br>
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                                <br>
+                                <label for="country">Type of inquiry</label>
+                                <select id="country" name="country">
+                                <option value="work">Work related</option>
+                                <option value="casual">Casual chat</option>
+                                <option value="other">Other</option>
+                                </select>
+                                <br>
+                                <label for="subject">Subject</label>
+                                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                                <br>
+                            </form>
+                            <input type="submit" value="Submit">
+                        </div>
                     </div>
-                    <div class="col-sm-6">
-                        <form class="contact-form">
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                            <br>
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                            <br>
-                            <label for="country">Type of inquiry</label>
-                            <select id="country" name="country">
-                            <option value="work">Work related</option>
-                            <option value="casual">Casual chat</option>
-                            <option value="other">Other</option>
-                            </select>
-                            <br>
-                            <label for="subject">Subject</label>
-                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                            <br>
-                        </form>
-                        <input type="submit" value="Submit">
-                    </div>
+                    <br>
+                    <br>
                 </div>
-                <br>
-                <br>
+            </section>
+            <footer>
+                <span id="backUp">&#8593;</span>
                 <div class="row social">
                     <div class="col-sm-2 text-center">
                         <img class="icons" id="github" src="assets/images/github-icon.png" value="https://github.com/EdwardEMC" alt="github">
@@ -179,8 +201,12 @@
                         <img class="icons" id="instagram" src="assets/images/insta-icon.png" alt="instagram">
                     </div>
                 </div>
-            </div>
-        </section>
+                <br>
+                <div class="row justify-content-center">
+                    <p style="color:white;">Edward Coad <span style="color:maroon;">&copy;2019</span></p>
+                </div>
+            </footer>
+        </div>
     </div>
 </body>
 </html>

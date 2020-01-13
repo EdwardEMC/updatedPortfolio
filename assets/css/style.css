@@ -12,6 +12,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.margin-white {
+    margin: 0 5% 0 5%;
+}
+
 section {
     min-height: 100vh;
     display: flex;
@@ -19,25 +23,35 @@ section {
     overflow: auto;
 }
 
-section:nth-child(1) {
-    background: url("../images/heroBG.png");
-    background-size: 100% 100%;
+#view {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    outline: 2px solid white;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    color: white;
+    font-size: 30px;
+    width: 150px;
+    transition-duration: 0.4s;
 }
 
-section:nth-child(3) { /*get one big basic image and split it up between the 4, skips 2 as the nav bar counts as a child in this case*/
+#view:hover {
+    background-color: slategray;
+    outline: 2px solid slategray;
+}
+
+#about {
+    background: rgb(253, 236, 236);
+    min-height: 110vh;
+}
+
+#portfolio { /*get one big basic image and split it up between the 4, skips 2 as the nav bar counts as a child in this case*/
     background: lightgrey;
     min-height: 110vh;
 }
 
-section:nth-child(4) {
-    background: lightsteelblue;
-}
-
-section:nth-child(5) {
-    background: lightgrey;
-}
-
-section:nth-child(6) {
+#contact {
     background: lightsteelblue;
 }
 
@@ -53,9 +67,14 @@ section:nth-child(6) {
     align-items: center;
     flex-direction: column;
     color: white;
+    height: 150px;
+    margin: auto;
+    border: 5px solid rgb(206, 177, 177);
+    padding: 0 10px 0 10px;
+    background: rgba(158, 158, 158, 0.5); 
 }
 
-.navi:hover {
+.static, .navi:hover {
     background-color: black;
     border-bottom: 2px solid blue;
 }
@@ -102,6 +121,11 @@ section:nth-child(6) {
 #profilePicture {
     float: right;
     margin: 0 0 5px 10px;
+}
+
+.goal-icon {
+    height: 50px; 
+    width: 50px;
 }
 
 /*------Experience page------*/
@@ -245,16 +269,44 @@ section:nth-child(6) {
 /*-----Contact Page-----*/
 
 .contact-area {
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 .contact-image {
     display: flex;
 }
 
+.contact-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
+}
+
+textarea {
+    resize: none;
+}
+
+footer {
+    background-color: black;
+}
+
+#backUp {
+    position: relative;
+    cursor: pointer;
+    bottom: 45px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    background-color: chocolate;
+    display: inline-block;
+    width: 35px;
+    height: 70px;
+    font-size: xx-large;
 }
 
 .social {

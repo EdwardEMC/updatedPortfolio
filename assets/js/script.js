@@ -48,6 +48,11 @@ $(document).ready(function(){
         location.href = "#about";
     });
 
+    //button to go from bottom to top
+    $("#backUp").on("click", function(){
+        location.href = "#home";
+    });
+
     //display navigation bar after scrolling past hero section
     let isFixed = false;
     $(document).on("scroll", function(){
@@ -57,7 +62,8 @@ $(document).ready(function(){
         if($(window).scrollTop()>=hSHeight && !isFixed) {
             isFixed = true
             navbar.removeClass("hidden");
-            navbar.hide().addClass("page-link").slideDown(300);
+            // navbar.hide().addClass("page-link").slideDown(300);
+            navbar.addClass("page-link");
         }
 
         if($(window).scrollTop()<hSHeight && isFixed) {
@@ -129,11 +135,11 @@ $(document).ready(function(){
                 url: "assets/images/fantasticRecipeFinder.jpg", href: "https://edwardemc.github.io/project1/"
         }],
         [{
-                url: "assets/images/weatherApp.jpg", href: "https://edwardemc.github.io/weather-Forecast/"
+                url: "assets/images/underConst.png", href: ""
             },
                 "","",""],
             [{
-                url: "assets/images/triviaGame.jpg", href: "https://edwardemc.github.io/code-Quiz/"},
+                url: "assets/images/underConst.png", href: ""},
                 "","",""
         ]
     ];
@@ -189,5 +195,13 @@ $(document).ready(function(){
     //on click event for social media icons
     $(".icons").on("click", function() {
         window.open($(this).attr("value"), "blank");
+    });
+
+    $("#view").mouseenter(function() {
+        $("#arrow").text(" \u2193");
+    });
+
+    $("#view").mouseleave(function() {
+        $("#arrow").text("\u2192");
     });
 });
