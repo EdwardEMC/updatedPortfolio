@@ -139,17 +139,18 @@
                 <div id="advModal" class="modal">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3>Application details</h3>
+                            <h3 class="appTitle"></h3>
                             <span class="close">&times;</span> 
                         </div>
                         <div class="modal-body">
                             <img class="modalPic" src="..." alt="Card image cap"> <!--Add image/text source when clicking the image-->
-                            <div class="description">
+                            <span class="description">
                                 <!--Area for application description--> 
-                            </div>
+                            </span>
                         </div>
                         <div class="modal-footer">
                             <button class="open">Open</button>
+                            <button class="openRepo">Open Repository</button>
                         </div>
                     </div>
                 </div>
@@ -159,9 +160,20 @@
             <section id="contact">
                 <div class="container contact-area">
                     <div class="row">
-                        <!-- <div class="col-sm-6 contact-image">
-                        <img src="assets/images/heroBG.png" style="width:100%">
-                        </div> -->
+                        <div class="col-sm-6 contact-image">
+                            <div class="contact-information">
+                                <h3>Contact Information</h3>
+                                <hr>
+                                <br>
+                                <p><strong>Email:</strong> Edwardcoad.ec@gmail.com</p>
+                                <br>
+                                <br>
+                                <p><strong>Phone:</strong> 0402099281</p>
+                                <br>
+                                <br>
+                                <p><strong>Resume link: <a href="Edward Coad Resume.pdf" target="_blank">Edward Coad Resume</a></strong></p>
+                            </div>
+                        </div>
                         <div class="col-sm-6 contact-container">
                             <form class="contact-form" action="mailto:edwardcoad.ec@gmail.com" method="post" enctype="text/plain">
                                 <label for="fname">First Name</label>
@@ -172,9 +184,9 @@
                                 <br>
                                 <label for="country">Type of inquiry</label>
                                 <select id="country" name="country">
-                                <option value="work">Work related</option>
-                                <option value="casual">Casual chat</option>
-                                <option value="other">Other</option>
+                                    <option value="work">Work related</option>
+                                    <option value="casual">Casual chat</option>
+                                    <option value="other">Other</option>
                                 </select>
                                 <br>
                                 <label for="subject">Subject</label>

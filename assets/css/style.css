@@ -46,6 +46,11 @@ section {
     min-height: 110vh;
 }
 
+#timeline {
+    background-image: url("../images/timelineBackground.jpg");
+    background-size: 100% 100%;
+}
+
 #portfolio { /*get one big basic image and split it up between the 4, skips 2 as the nav bar counts as a child in this case*/
     background-image: url("../images/portfolioBackground.jpg");
     background-size: 100% 100%;
@@ -213,7 +218,7 @@ section {
 }
 
 .modalSel {
-    border: 3px solid black;
+    border: 8px solid black;
     box-shadow: 0 0 20px black;
 }
 

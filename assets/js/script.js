@@ -7,8 +7,10 @@ $(document).ready(function() {
     const modal = $("#advModal");
     const modalSel = $(".modalSel");
     const open = $(".open");
+    const openR = $(".openRepo");
     const next = $(".next");
     const previous = $(".previous");
+    const modalTitle = $(".appTitle");
     const modalTxt = $(".description");
     const view = $("#view");
    
@@ -57,16 +59,21 @@ $(document).ready(function() {
         const div1 = $("<div>").addClass("card");
         const div2 = $("<div>").addClass("card-header");
         const div3 = $("<div>").addClass("card-body");
+        const div4 = $("<div>").addClass("card-info");
         const h5 = $("<h5>").addClass("card-title");
         const img = $("<img>").addClass("timeline-picture");
         const p = $("<p>").addClass("card-text");
 
         div2.text(info[param1].feature);
         h5.text(info[param1].header);
-        img.text(info[param1].url);
         p.text(info[param1].text);
 
-        div3.append(h5, p);
+        div4.attr("style", "float:right;");
+        img.attr("src", info[param1].url);
+        img.attr("style","height: 200px;width: 200px, float:right;");
+
+        div4.append(img);
+        div3.append(h5, div4, p);
         div1.append(div2,div3);
         $(".information").append(div1);
     }
@@ -77,13 +84,16 @@ $(document).ready(function() {
 
     const initial = () => {
         modalSel.attr("src", images[x][y].url);
+        const h = $("<h3>").text(images[x][y].title);
         const p = $("<p>").text(images[x][y].text);
+        modalTitle.empty();
         modalTxt.empty();
+        modalTitle.append(h);
         modalTxt.append(p);
     }
     initial();
     
-    // on click functions to control the image slideshow --- change to click on next picture
+    // on click functions to control the image slideshow 
     next.on("click", () => {
         if(y==images[x].length-1) {
             y = 0;
@@ -104,7 +114,8 @@ $(document).ready(function() {
         initial()
     });
 
-    open.on("click", () => window.open(images[x][y].href, "blank"));
+    open.on("click", () => window.open(images[x][y].href, "_blank"));
+    openR.on("click", () => window.open(images[x][y].repo, "_blank"));
 
     //on click functions for changing the portfolio libraries
     $(".types").on("click", function() {
