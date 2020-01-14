@@ -58,7 +58,8 @@ section {
 }
 
 #contact {
-    background: lightsteelblue;
+    background-image: url("../images/contactBackground.jpg");
+    background-size: 100% 100%;
 }
 
 #hero {
@@ -72,12 +73,11 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     color: white;
-    height: 150px;
     margin: auto;
-    border: 5px solid rgb(206, 177, 177);
     padding: 0 10px 0 10px;
-    background: rgba(158, 158, 158, 0.5); 
+    background: rgba(158, 158, 158, 0.6); 
 }
 
 .static, .navi:hover {
