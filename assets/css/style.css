@@ -20,7 +20,6 @@ section {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    overflow: auto;
 }
 
 #view {
@@ -93,7 +92,7 @@ section {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 50px;
+    overflow: auto;
     background-color: black;
     border-bottom: 2px solid blue;
     z-index: 99;
@@ -140,7 +139,7 @@ section {
     margin: 0 auto;
     margin-top: 150px;
     display: block;
-    width: 90%;
+    width: 100%;
     height: 1px;
     background: black;
 }
@@ -154,7 +153,6 @@ section {
     display: inline-block;
     position: relative;
     height: 100%;
-    margin-right: 70px;
     transition: width .5s;
     z-index: 1;
 }
@@ -242,8 +240,8 @@ section {
 /*modal settings*/
 .modal {
     display: none; /*hidden by default*/
-    position: fixed; /*Stays in place*/
-    z-index: 1; /*Appears ontop*/
+    position: fixed; /*Stays in one place*/
+    z-index: 100; /*Appears ontop*/
     left: 0;
     top: 0;
     width: 100%;
@@ -263,6 +261,11 @@ section {
     width: 80%;
 }
 
+.modalPic {
+    float: right;
+    margin-left:30px;
+}
+
 .close {
     color: #aaa;
     float: right;
@@ -272,7 +275,7 @@ section {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: white;
     text-decoration: none;
     cursor: pointer;
 }
@@ -328,4 +331,24 @@ footer {
 .icons {
     max-height: 40px;
     max-width: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    .page-link {
+        text-align: center;
+        padding: 0px;
+        overflow: auto;
+    }
+
+    .modalPic {
+        display: none;
+    }
+
+    .modal-content {
+        overflow: auto;
+    }
+
+    .contact-form {
+        text-align: center;
+    }
 }

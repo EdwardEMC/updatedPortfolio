@@ -61,7 +61,7 @@ $(document).ready(function() {
         const div3 = $("<div>").addClass("card-body");
         const div4 = $("<div>").addClass("card-info");
         const h5 = $("<h5>").addClass("card-title");
-        const img = $("<img>").addClass("timeline-picture");
+        const img = $("<img>").addClass("timeline-picture img-fluid");
         const p = $("<p>").addClass("card-text");
 
         div2.text(info[param1].feature);
@@ -70,7 +70,7 @@ $(document).ready(function() {
 
         div4.attr("style", "float:right;");
         img.attr("src", info[param1].url);
-        img.attr("style","height: 200px;width: 200px, float:right;");
+        img.attr("style","max-height: 200px;max-width: 200px, margin-left:10px;");
 
         div4.append(img);
         div3.append(h5, div4, p);
@@ -130,7 +130,14 @@ $(document).ready(function() {
         $(".modalPic").attr({
             src: images[x][y].url,
         });
-        $(".modalPic").attr("style", "width:300px; height:300px; float:right; margin-left:30px;"); 
+        $(".modalPic").attr("style", "max-width:300px; max-height:300px;"); 
+    });
+
+    $(document).click(function(event) {
+        //if you click on anything except the modal itself or the "open modal" link, close the modal
+        if (!$(event.target).closest(modal).length) {
+          $("body").find(".modal").removeClass("visible");
+        }
     });
 
     //clicking the x button will close the modal

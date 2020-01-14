@@ -102,7 +102,7 @@ const info = [ //information to do with the timeline
         feature: "Shake Street",
         header: "Personal business venture",
         url: "assets/images/timeline/shakestreet.jpg",
-        text: "A project that started when an initial University degree and everyday hospotality jobs just didn't seem to peek any interest, starting completely from scratch as a mobile food truck and ending in a CBD cafe 3 years later. All aspects of the business were taken care of personally; including design, council interactions, furniture fabrication, accounting, menu composition, etc. Decided to call it quits after 4 years and the initial goal of owning a cafe was complete, now moving on to establish a career in the IT sector."
+        text: "A project that started when an initial University degree and everyday hospitality jobs just didn't seem to peek any interest, starting completely from scratch as a mobile food truck and ending in a CBD cafe 3 years later. All aspects of the business were taken care of personally; including design, council interactions, furniture fabrication, accounting, menu composition, etc. Decided to call it quits after 4 years and the initial goal of owning a cafe was complete, now moving on to establish a career in the IT sector."
     },
     { 
         feature: "Triology Education",
